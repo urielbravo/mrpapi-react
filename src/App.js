@@ -1,23 +1,23 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import navbar from "./app/navbar/navbar";
+import TopBar from "./app/navbar/TopBar";
+import SideBar from "./app/sidebar/SideBar";
 
-function App() {
+const App = () => {
   return (
     <>
       <Container fluid>
-        <Row></Row>
         <Row>
           <Col style={{ backgroundColor: "#FF4081" }} md={2}>
-            Side panel
+            <SideBar />
           </Col>
-          <Col style={{ backgroundColor: "#F44336" }} md={10}>
-            Purchasing
+          <Col md={10}>
+            <TopBar></TopBar>
           </Col>
         </Row>
       </Container>
     </>
   );
-}
+};
 
 export default App;
